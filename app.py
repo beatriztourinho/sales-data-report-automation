@@ -21,10 +21,10 @@ pyautogui.click(x=1029, y=432)
 
 time.sleep(7)
 
-tabela = pd.read_excel(r"C:\Users\Beatriz\Downloads\Vendas - Dez.xlsx")
+table = pd.read_excel(r"C:\Users\Beatriz\Downloads\Vendas - Dez.xlsx")
 
-quantidade = tabela["Quantidade"].sum()
-faturamento = tabela["Valor Final"].sum()
+quantity = table["Quantidade"].sum()
+incoming = table["Valor Final"].sum()
 
 pyautogui.press('f11')
 pyautogui.hotkey("ctrl", "t")
@@ -45,12 +45,12 @@ pyautogui.write("Sales Report")
 pyautogui.press('tab')
 
 
-texto = f"""Prezados,
+texto = f"""Dear bord of directors,
 
-O faturamento do periodo solicitado foi de R${faturamento:,.2f}
-A quantidade de produtos vendidos foi de {quantidade:,}
+The incoming of the analyzed period was R${incoming:,.2f}
+The amount of sold products was {quantity:,}
 
-Atenciosamente,
+Cordially,
 Beatriz Tourinho"""
 
 pyautogui.write(texto)
